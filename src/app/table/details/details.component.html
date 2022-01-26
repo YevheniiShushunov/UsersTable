@@ -1,0 +1,82 @@
+<div class="details">
+    <div class="details-header">
+        <div class="header-button">
+            <button mat-raised-button (click)="backToList()">Back to users</button>   
+        </div>
+    </div>
+    <div class="details-user">
+        <div class="details-base-info">
+            <div class="details-user-image">
+                <img src={{userDetails?.picture}}} alt="user" class="img">
+            </div>
+            <div class="details-item">
+                <span class="material-icons">info</span>
+                <span class="detai-title">Name:</span>
+                <span class="detail-item-name">{{userDetails?.name}}</span> 
+            </div>
+            <div class="details-item">
+                <span class="material-icons">info</span>
+                <span class="detai-title">Gender:</span>
+                <span class="detail-item-name">{{userDetails?.gender}}</span>
+                  
+            </div>
+            <div class="details-item">
+                <span class="material-icons">info</span>
+                <span class="detai-title">Age:</span>
+                <span class="detail-item-name">{{userDetails?.age}}</span> 
+            </div>
+            <div class="details-item">
+                <span class="material-icons">info</span>
+                <span class="detai-title">Eye Color:</span>
+                <span class="detail-item-name">{{userDetails?.eyeColor}}</span>
+            </div>
+            <div class="details-item">
+                <span class="material-icons">info</span>
+                <span class="detai-title">Registration:</span>
+                <span class="detail-item-name">{{userDetails?.registered | date: "mediumDate"}}</span>    
+            </div>
+            <div class="details-item">
+                <span class="material-icons">email</span>
+                <span class="detai-title">Emal:</span>
+                <span class="detail-item-name">{{userDetails?.email}}</span>   
+            </div>
+            <div class="details-item">
+                <span class="material-icons">phone</span>
+                <span class="detai-title">Phone:</span>
+               <span class="detail-item-name">{{userDetails?.phone}}</span>
+            </div>
+            <div class="details-item-address">
+                <span class="material-icons">location_on</span>
+                <span class="detai-title">Addres:</span>
+                <span class="detail-item-name">{{userDetails?.address}}
+                    <div class="coordinates">
+                        <div class="title">Geo:</div>
+                        <div class="coordinates-item">latitude:  {{userDetails?.latitude}}</div>
+                        <div class="coordinates-item">longitude: {{userDetails?.longitude}}</div>
+                    </div>
+                    
+                </span>
+            </div>
+
+        </div>
+        <div class="details-other">
+            <div class="other-item about">
+                <span class="other-title-about">About:</span>
+                 {{userDetails?.about}}
+            </div>
+            <div class="other-item">
+                <span class="material-icons">monetization_on</span>
+                <span class="other-item-title">Balance:</span>
+                {{userDetails?.balance}}
+            </div>
+            
+            <div class="other-tags">
+                <div class="tags" *ngFor="let tag of userDetails?.tags">
+                    <div class="tag-item">#{{tag}}</div>
+                </div>    
+            </div>
+            
+        </div>
+    </div>
+</div>
+

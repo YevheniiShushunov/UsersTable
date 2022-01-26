@@ -1,0 +1,24 @@
+@mixin hover {
+    &:hover{
+        background-color: #aaa4b8;
+        transition: 0.8s;
+        cursor: pointer;
+    }
+}
+
+table{
+    width: 100%;
+
+    .mat-row{
+        @include hover;
+    }
+
+    .mat-row:nth-child(even){
+        background-color: #e2deeb;
+
+        @include hover;
+    }
+}
+
+
+
